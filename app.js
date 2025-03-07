@@ -1,7 +1,6 @@
 var express = require("express");
 var app = express();
 
-
 // Cấu hình views và static files
 app.set("views", __dirname + "/frontend/src/views");
 app.set("view engine", "ejs");
