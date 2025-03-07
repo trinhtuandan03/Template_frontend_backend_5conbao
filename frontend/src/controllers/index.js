@@ -1,12 +1,11 @@
-var express = require("express");
+var express = require('express');
 var router = express.Router();
 
-router.use("/home", require(__dirname + "/homecontroller"));
 
-router.use("/", require(__dirname + "/admin/admincontroller"));
-
-
-router.get("/", function(req, res) {
+router.get("/", function(req, res){
     res.render("index.ejs");
 });
+
+router.use("/admin", require(__dirname + "/admin/admincontroller"));
+router.use("/admin/widget", require(__dirname + "/admin/widgetcontroller"));
 module.exports = router;

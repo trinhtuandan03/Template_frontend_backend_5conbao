@@ -1,0 +1,7 @@
+var express = require( "express");
+var router = express.Router();
+
+router.get("/", function(req,res){
+    res.render( "admin/widget_admin.ejs"); 
+});
+module.exports = router;
